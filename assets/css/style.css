@@ -1,0 +1,53 @@
+/* Move down content because we have a fixed navbar that is 3.5rem tall */
+body {
+  padding-top: 3.5rem;
+}
+
+nav {
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+.container {
+  color: white;
+  word-wrap: break-word;
+  min-width: 240px;
+  min-height: 48px;
+  padding-top: 100px;
+  margin: auto;
+}
+
+.content-box {
+  background-color: rgba(52, 58, 64, .75);
+  border-radius: 3px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  padding: 10px;
+  height: 100%;
+}
+
+.col-md-4 {
+  padding-bottom: 25px;
+}
+
+.col-lg-12 {
+  text-align: center;
+}
+
+.nav-link {
+  position: absolute;
+  top: .625rem;
+  right: 0%;
+  font-size: .75rem;
+}
+
+/* ---- particles.js container (AKA background) ---- */
+
+#particles-js.particles-js {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #50c9cd;
+  background-image: url("");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+}
