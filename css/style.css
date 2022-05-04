@@ -1,0 +1,803 @@
+div,
+p {
+  font-family : 'Ubuntu',
+                sans-serif;
+}
+
+body {
+  margin           : 0px;
+  padding          : 0px;
+  overflow-x       : hidden;
+  background-color : #000;
+  text-align       : center;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  color       : #fff;
+  font-family : 'Comfortaa',
+                cursive;
+  font-weight : 300;
+}
+
+.row-white h1,
+.row-white h2,
+.row-white h3,
+.row-white h4,
+.row-white h5,
+.row-white p {
+  color : #000;
+}
+
+.modal-wrap * {
+  color : #000;
+}
+
+p {
+  color : #fff;
+}
+
+section {
+  position    : relative;
+  padding     : 0;
+  line-height : 18pt;
+}
+
+section .container {
+  box-sizing : border-box;
+  width      : 100%;
+  max-width  : 1200px;
+  margin     : 0 auto;
+  padding    : 0 10px;
+}
+
+section .flex-50-gt-sm {
+  display : block;
+}
+
+@keyframes slideInLeft {
+  0% {
+    opacity   : 0;
+    transform : translateX(-300px);
+  }
+
+  100% {
+    opacity   : 1;
+    transform : translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  0% {
+    opacity   : 0;
+    transform : translateX(300px);
+  }
+
+  100% {
+    opacity   : 1;
+    transform : translateX(0);
+  }
+}
+
+@keyframes flipInX {
+  from {
+    opacity                           : 0;
+    -webkit-animation-timing-function : ease-in;
+    animation-timing-function         : ease-in;
+    -webkit-transform                 : perspective(400px) rotateY(90deg);
+    transform                         : perspective(400px) rotateY(90deg);
+  }
+
+  40% {
+    -webkit-animation-timing-function : ease-in;
+    animation-timing-function         : ease-in;
+    -webkit-transform                 : perspective(400px) rotateY(-20deg);
+    transform                         : perspective(400px) rotateY(-20deg);
+  }
+
+  60% {
+    opacity           : 1;
+    -webkit-transform : perspective(400px) rotateY(10deg);
+    transform         : perspective(400px) rotateY(10deg);
+  }
+
+  80% {
+    -webkit-transform : perspective(400px) rotateY(-5deg);
+    transform         : perspective(400px) rotateY(5deg);
+  }
+
+  to {
+    opacity           : 1;
+    -webkit-transform : perspective(400px);
+    transform         : perspective(400px);
+  }
+}
+
+@keyframes popIn {
+  0% {
+    transform : scale(0);
+  }
+
+  60% {
+    opacity   : 1;
+    transform : scale(1.05);
+  }
+
+  80% {
+    transform : scale(0.95);
+  }
+
+  100% {
+    opacity   : 1;
+    transform : scale(1);
+  }
+}
+
+@keyframes fadeIn {
+  100% {
+    opacity : 1;
+  }
+}
+
+.header {
+  position : relative;
+}
+
+.flex {
+  display         : flex;
+  align-items     : center;
+  flex-direction  : column;
+  justify-content : center;
+}
+
+.flex-row {
+  flex-direction : row;
+}
+
+.flex.wrap {
+  flex-wrap : wrap;
+}
+
+.big {
+  font-size : 3rem;
+}
+
+.inline-style {
+  display : inline;
+}
+
+.menu-banner {
+  z-index  : 2;
+  position : absolute;
+  right    : 1vw;
+  bottom   : 1vh;
+}
+
+.menu-item {
+  margin-right    : .2em;
+  margin-left     : .2em;
+  text-decoration : underline;
+  font-size       : 1.5rem;
+  cursor          : pointer;
+}
+
+.menu-item:hover {
+  color : rgba(155,155,155,.75);
+}
+
+.link {
+  transition : color .15s ease-in-out;
+}
+
+.inline-link {
+  margin-right : .2em;
+  margin-left  : .2em;
+  color        : #0288D1;
+  cursor       : pointer;
+}
+
+.inline-link:hover {
+  color : #03A9F4;
+}
+
+.name-banner {
+  z-index  : 2;
+  position : absolute;
+  top      : 5vh;
+  left     : 2vw;
+}
+
+.cover {
+  z-index  : 1;
+  position : absolute;
+  width    : 100%;
+  height   : 100vh;
+}
+
+.pts-container {
+  z-index  : 0;
+  position : relative;
+  width    : 100%;
+  height   : 100vh;
+}
+
+.profile-pic {
+  width         : 200px;
+  border-radius : 50%;
+  box-shadow    : 0px 4px 6px 2px #ccc;
+}
+
+.row-white {
+  width            : 100%;
+  min-height       : 40vh;
+  clip-path        : polygon(0 0%, 100% 4%, 100% 96%, 0% 100%);
+  padding          : 65px 0px;
+  background-color : #EDEDED;
+}
+
+.row-black {
+  width      : 100%;
+  min-height : 40vh;
+  padding    : 65px 0px;
+}
+
+.row-footer {
+  width            : 100%;
+  min-height       : 40vh;
+  clip-path        : polygon(0 0%, 100% 4%, 100% 100%, 0% 100%);
+  padding          : 65px 0px;
+  background-color : #EDEDED;
+}
+
+.button {
+  display    : inline-block;
+  box-sizing : inherit;
+  padding    : 10px 20px;
+  border     : 2px solid #000;
+  font-size  : 13pt;
+  transition : all .5s;
+  cursor     : pointer;
+}
+
+.circle-wrap {
+  display    : inline-block;
+  position   : relative;
+  width      : 80px;
+  height     : 80px;
+  text-align : center;
+}
+
+.circle {
+  display          : inline-block;
+  width            : 100%;
+  height           : 100%;
+  border-radius    : 50%;
+  background-color : #03A9F4;
+}
+
+.label {
+  font-size   : 14pt;
+  font-weight : 500;
+}
+
+/* Portfolio pieces */
+
+section:nth-of-type(2) .container {
+  padding : 0;
+}
+
+section:nth-of-type(2) .text {
+  position : absolute;
+  top      : 0;
+  left     : 0;
+  width    : 100%;
+  color    : #000;
+}
+
+section:nth-of-type(2) #portfolio {
+  margin : 20px 0;
+}
+
+section:nth-of-type(2) #portfolio .button,
+section:nth-of-type(2) #portfolio .text {
+  z-index    : 2;
+  color      : #fff;
+  opacity    : 0;
+  text-align : center;
+  transition : all 0.1s ease-in-out;
+}
+
+section:nth-of-type(2) #portfolio .button .bold,
+section:nth-of-type(2) #portfolio .text .bold {
+  font-size : 16pt;
+}
+
+section:nth-of-type(2) #portfolio .button {
+  position  : absolute;
+  right     : 0;
+  bottom    : 0;
+  left      : 0;
+  width     : 170px;
+  margin    : 0 auto;
+  padding   : 2px 0;
+  border    : 2px solid #03A9F4;
+  font-size : 13pt;
+}
+
+section:nth-of-type(2) #portfolio .button a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  color: white;
+  text-decoration: none;
+}
+
+section:nth-of-type(2) #portfolio .mix .waypoint {
+  background : #fff;
+}
+
+section:nth-of-type(2) #portfolio .card {
+  border: 1px solid #fff;
+  margin: 5px;
+}
+
+section:nth-of-type(2) #portfolio .mix .button:hover {
+  color      : #fff;
+  background : #03A9F4;
+}
+
+section:nth-of-type(2) #portfolio .mix:nth-child(1) .card {
+  background : url("../img/synth.png") center center/cover;
+}
+
+section:nth-of-type(2) #portfolio .mix:nth-child(2) .card {
+  background : url("../img/thumb-3.jpg") center center/cover;
+}
+
+section:nth-of-type(2) #portfolio .mix .card {
+  width      : calc(50vw - 8px);
+  height     : 150px;
+  transition : opacity .5s;
+}
+
+section:nth-of-type(2) #portfolio .mix:hover .card {
+  opacity : 0;
+}
+
+section:nth-of-type(2) #portfolio .mix:hover .text {
+  top     : 24%;
+  opacity : 1;
+}
+
+section:nth-of-type(2) #portfolio .mix:hover .button {
+  bottom  : 24%;
+  opacity : 1;
+  cursor  : pointer;
+}
+
+@keyframes slideUp {
+  0% {
+    transform : translateY(300px);
+  }
+
+  100% {
+    opacity   : 1;
+    transform : translateY(0);
+  }
+}
+
+footer .icon-wrap .icon {
+  position   : relative;
+  width      : 55px;
+  height     : 55px;
+  margin     : 0 15px;
+  overflow   : hidden;
+  text-align : center;
+  font-size  : 18pt;
+  transition : background 0.3s,
+               color 0.3s,
+               box-shadow 0.3s,
+               transform 0.3s;
+  cursor     : pointer;
+}
+
+footer {
+  background: #000;
+  padding: 70px 0 50px 0;
+  position: relative; }
+
+  #contact .icon-wrap .icon {
+    overflow: hidden;
+    transition: background 0.3s, color 0.3s, box-shadow 0.3s, transform 0.3s;
+    cursor: pointer;
+    width: 55px;
+    height: 55px;
+    position: relative;
+    text-align: center;
+    margin: 0 15px;
+    background: #1E242C;
+    font-size: 18pt;
+   }
+
+#contact .icon-wrap .mdi {
+  color      : #fff;
+  text-align : center;
+}
+
+#contact .icon-wrap .icon:hover {
+  background : #E31B6D;
+  box-shadow : 0 0 0 3px rgba(4, 94, 201, 0.1);
+  transform  : scale(0.9);
+}
+
+#contact .icon-wrap .icon:hover .mdi {
+  color : #fff;
+}
+
+#contact .icon-wrap .icon:hover .mdi {
+  -moz-animation    : toBottomFromTop 0.3s forwards;
+  -webkit-animation : toBottomFromTop 0.3s forwards;
+  animation         : toBottomFromTop 0.3s forwards;
+}
+
+#contact .copyright-note {
+  position: relative;
+  bottom: 0;
+  margin-top : 35px;
+  opacity    : 0.6;
+  font-size  : 10pt;
+}
+
+/* MODAL STYLES */
+
+.modal-wrap {
+  z-index        : 100;
+  position       : fixed;
+  width          : 100vw;
+  height         : 100vh;
+  pointer-events : none;
+}
+
+.modal-wrap .mask {
+  position   : absolute;
+  top        : 0;
+  left       : 0;
+  width      : 100%;
+  height     : 100%;
+  opacity    : 0;
+  background : rgba(0, 0, 0, 0.5);
+  transition : opacity .3s;
+}
+
+.modal-wrap .modal-cust {
+  box-sizing  : border-box;
+  position    : relative;
+  height      : 100vh;
+  color       : #333;
+  opacity     : 0;
+  background  : #fff;
+  box-shadow  : 0 0 10px rgba(0, 0, 0, 0.4);
+  text-align  : left;
+  align-items : flex-start;
+  transform   : scale(0.8);
+  transition  : all .3s;
+}
+
+.modal-wrap .close {
+  position    : absolute;
+  right       : 10px;
+  bottom      : 25px;
+  color       : #bbb;
+  font-size   : 20pt;
+  font-weight : 800;
+  cursor      : pointer;
+}
+
+.modal-wrap .info-box {
+  box-sizing : border-box;
+  padding    : 15px 10px 85px 10px;
+  color      : #444;
+  border-top : 3px solid #1B242F;
+}
+
+.modal-wrap .title {
+  color       : #000;
+  font-size   : 16pt;
+  line-height : 20pt;
+}
+
+.modal-wrap .tag {
+  display        : block;
+  padding-bottom : 15px;
+  color          : #707070;
+  border-bottom  : 1px solid rgba(0, 0, 0, 0.1);
+  font-size      : 8pt;
+  font-weight    : 300;
+}
+
+.modal-wrap .detail {
+  margin-top  : 13px;
+  font-size   : 9pt;
+  line-height : 14pt;
+}
+
+.modal-wrap .mdi-open-in-new {
+  position  : relative;
+  left      : -10px;
+  font-size : 11pt;
+}
+
+.modal-wrap .button {
+  visibility     : hidden;
+  position       : absolute;
+  bottom         : 20px;
+  left           : 10px;
+  padding        : 11px 30px;
+  color          : #fff;
+  border         : 0;
+  background     : #FF5252;
+  font-size      : 10pt;
+  font-weight    : 600;
+  transition     : all .5s;
+  pointer-events : none;
+  cursor         : pointer;
+}
+
+.modal-wrap .button.viewable {
+  visibility     : visible;
+  pointer-events : initial;
+}
+
+.modal-wrap .button:hover {
+  color      : #FF5252;
+  background : #fff;
+}
+
+.modal-wrap .carousel {
+  box-shadow : 10px 10px 5px 0px rgba(0, 0, 0, 0.25);
+}
+
+.modal-wrap.viewable {
+  pointer-events : initial;
+}
+
+.modal-wrap.viewable .modal-cust {
+  opacity   : 1;
+  transform : scale(1);
+}
+
+.modal-wrap.viewable .mask {
+  opacity : 1;
+}
+
+.modal-cust {
+  max-width : 840px;
+}
+
+.window {
+  position   : relative;
+  overflow   : hidden;
+  background : #222;
+}
+
+.mdi-chevron-left,
+.mdi-chevron-right {
+  position    : absolute;
+  bottom      : 0;
+  padding     : 10px 15px;
+  color       : #fff;
+  background  : rgba(0, 0, 0, 0.3);
+  font-size   : 14pt !important;
+  font-weight : bold;
+  cursor      : pointer;
+}
+
+.mdi-chevron-right {
+  right : 0;
+}
+
+.mdi-chevron-left {
+  left : 0;
+}
+
+.transition {
+  transition : .7s;
+}
+
+#carousel {
+  position : relative;
+  top      : 0;
+  width    : 10000px;
+}
+
+.slide {
+  display         : flex;
+  height          : 250px;
+  float           : left;
+  flex-direction  : column;
+  justify-content : center;
+  cursor          : pointer;
+}
+
+.carousel-wrap {
+  position : relative;
+  height   : 250px;
+  margin   : 0 auto;
+}
+
+@media
+  screen
+  and (max-width : 425px) {
+  section:nth-of-type(2) #portfolio .mix .card {
+    width : 100vw;
+  }
+}
+
+@media
+  screen
+  and (min-width : 600px) {
+  section {
+    line-height : 18pt;
+  }
+
+  section .container {
+    padding : 0 10px;
+  }
+
+  section:nth-of-type(1) .text {
+    font-size   : 32pt;
+    line-height : 36pt;
+  }
+
+  section:nth-of-type(1) .button {
+    padding : 12px 50px 12px 20px;
+  }
+
+
+  section:nth-of-type(2) #portfolio .mix .card {
+    width : 650px;
+  }
+
+  section:nth-of-type(2) .filter {
+    margin    : 0 15px;
+    padding   : 0 30px;
+    font-size : 11pt;
+  }
+
+  section:nth-of-type(2) .float-bar {
+    height : 30px;
+  }
+
+  .circle-wrap {
+    width  : 100px;
+    height : 100px;
+  }
+
+  .mdi-chevron-left,
+  .mdi-chevron-right {
+    font-size : 25pt !important;
+  }
+
+  .big {
+    font-size : 4rem;
+  }
+
+  .modal-wrap .modal {
+    top    : -6vh;
+    height : initial;
+  }
+
+  .modal-wrap .info-box {
+    padding : 35px 60px 90px 25px;
+  }
+
+  .modal-wrap .title {
+    font-size   : 22pt;
+    line-height : 30pt;
+  }
+
+  .modal-wrap .tag {
+    font-size : 11pt;
+  }
+
+  .modal-wrap .detail {
+    margin-top  : 15px;
+    font-size   : 11pt;
+    line-height : 18pt;
+  }
+
+  .modal-wrap .close {
+    right : 25px;
+  }
+
+  .modal-wrap .button {
+    left : 25px;
+  }
+
+  .carousel-wrap,
+  .slide {
+    height : 450px;
+  }
+}
+
+@media
+  screen
+  and (min-width : 960px) {
+  .waypoint {
+    opacity : 0;
+  }
+
+  .animated.waypoint#portfolio {
+    opacity : 1;
+  }
+
+  .animated.waypoint#portfolio .mix:nth-child(1) > div {
+    opacity   : 0;
+    animation : slideUp 0.75s 0.1s ease both;
+  }
+
+  .animated.waypoint#portfolio .mix:nth-child(2) > div {
+    opacity   : 0;
+    animation : slideUp 0.75s 0.2s ease both;
+  }
+
+  .animated.waypoint#portfolio .mix:nth-child(3) > div {
+    opacity   : 0;
+    animation : slideUp 0.75s 0.3s ease both;
+  }
+
+  .animated.waypoint#portfolio .mix:nth-child(4) > div {
+    opacity   : 0;
+    animation : slideUp 0.75s 0.4s ease both;
+  }
+
+  .animated.waypoint#portfolio .mix:nth-child(5) > div {
+    opacity   : 0;
+    animation : slideUp 0.75s 0.5s ease both;
+  }
+
+  .animated.waypoint#portfolio .mix:nth-child(6) > div {
+    opacity   : 0;
+    animation : slideUp 0.75s 0.6s ease both;
+  }
+
+  .animated.slide-up {
+    animation : slideUp .75s ease both;
+  }
+
+  .animated.slide-in-left {
+    animation : slideInLeft .75s ease both;
+  }
+
+  .animated.slide-in-right {
+    animation : slideInRight .75s ease both;
+  }
+
+  .animated.flip-in-x:nth-of-type(1) {
+    animation : flipInX .75s ease both;
+  }
+
+  .animated.flip-in-x:nth-of-type(2) {
+    animation : flipInX .75s .1s ease both;
+
+  }
+
+  .animated.pop-in {
+    animation : popIn 1s both;
+  }
+
+  .animated.fade-in {
+    animation : fadeIn .75s ease both;
+  }
+
+  .flex.row-gt-sm {
+    flex-direction : row;
+  }
+
+  .menu-item {
+    font-size : 2rem;
+  }
+}

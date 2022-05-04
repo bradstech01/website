@@ -1,77 +1,133 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Brad? Yeah, I know him. Great guy.">
-    <meta name="author" content="Brad Stech">
-    <link rel="icon" href="favicon.ico">
+<!DOCTYPE html>
+<html>
 
-    <title>Brad Stech</title>
+<!-- hi robot -->
 
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
-    <link href="assets/css/style.css" rel="stylesheet">
-  </head>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Brad Stech, web developer based in Philadelphia, PA.">
+	<meta name="keywords"
+		content="BRAD STECH WEB DEVELOPER DEVELOPMENT DESIGN TECHNOLOGY GRAPHIC FRONTEND BACKEND FRONT BACK END JAVASCRIPT HTML CSS WORDPRESS HIRE">
 
-  <body>
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-      <a class="navbar-brand" href="#">brads.tech</a>
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link">&copy; Brad Stech 2018</a>
-        </li>
-      </ul>
-    </nav>
+	<title>Brad Stech</title>
 
-    <!-- Funky background go here -->
-    <div id="particles-js" class="particles-js">
-    </div>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Comfortaa|Ubuntu" rel="stylesheet">
+	<link rel="stylesheet" href="css/materialdesignicons.min.css" media="all" type="text/css">
+	<link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" href="css/style.css">
 
-    <!-- This is our header display - just a container and a row -->
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12">
-          <div class="content-box">
-            <h1 class="display-1">Hi, I'm Brad</h1>
-            <p>I'm a web developer/programmer based in Madison, WI.</p>
-          </div>
-        </div>
-      </div>
-    </div>
+</head>
 
+<body>
+	<div class="modal-wrap flex">
+		<div class="mask"></div>
+		<div class="modal-cust" id="modal">
+			<div class="carousel-wrap">
+				<div class="window">
+					<div id="carousel">
+						<div class="slide"></div>
+						<div class="slide"></div>
+						<div class="slide"></div>
+					</div>
+					<i class="mdi mdi-chevron-left" id="prev"></i>
+					<i class="mdi mdi-chevron-right" id="next"></i>
+				</div>
 
-    <!-- The content (ha) -->
-    <div class="container">
-      <div class="row">
-        <div class="col-md-4">
-          <div class="content-box">
-            <h2>Web Development</h2>
-            <p>I've lived my entire life in the age of the internet. As a result, I like cool looking websites.</p>
-            <p>I've got experience with a loose smattering of web technology, from web design to the MERN stack to programming web extensions.</p>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="content-box">
-            <h2>Bio</h2>
-            <p>I'm a quick learner who thrives on experimentation. I rock climb, I play guitar, and I have a great dog.</p>
-            <p>Right now I work at Epic, the healthcare software company in and around Madison, WI.</p>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="content-box">
-            <h2>Get in touch</h2>
-            <p>If you want to connect, I'm on <a href="https://www.linkedin.com/in/brad-stech-95333492/">LinkedIn</a>. You can also email me at <a href="mailto:mr@brads.tech">mr@brads.tech</a>.</p>
-          </div>
-        </div>
-      </div>
-    </div>
+			</div>
+			<div class="info-box">
+				<h3 class="title"></h3>
+				<h4 class="tag"></h4>
+				<p class="detail"></p>
+				<a href="#" target="_blank">
+					<div class="button"><i class="mdi mdi-open-in-new"></i>VIEW SITE</div>
+				</a>
+			</div>
+			<i class="close mdi mdi-close"></i>
+		</div>
+	</div>
 
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script>window.jQuery || document.write('<script src="assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
-    <script src="assets/js/vendor/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-    <script src="assets/js/particles.js"></script>
-    <script src="assets/js/app.js"></script>
-  </body>
+	<section id="front">
+		<div class="pts-container">
+			<div class="cover"></div>
+			<canvas id="pts"></canvas>
+			<div class="name-banner">
+				<h1 class="big inline-style waypoint" data-animation="fade-in">brad stech</h1>
+			</div>
+			<nav class="menu-banner">
+				<h2 class="menu-item inline-style link" dest="work">projects</h2>
+				<h2 class="menu-item inline-style link" dest="contact">contact</h2>
+			</nav>
+		</div>
+	</section>
+
+	<section id="work" class="flex">
+		<div class="row row-black flex">
+			<div class="container flex">
+				<h2 class="waypoint header big" data-animation="slide-in-left">projects</h2>
+				<div id="portfolio" class="flex row wrap waypoint">
+					<div class="mix">
+						<div>
+							<div class="card"></div>
+							<div class="text">
+								<div class="bold">Synth</div>
+								<span class="highlight">Web-based Synthesizer</span>
+							</div>
+							<div class="button" id="synth"><a target="_blank" href="https://brads.tech/synth">Visit
+									Site</a></div>
+						</div>
+					</div>
+
+					<div class="mix">
+						<div>
+							<div class="card"></div>
+							<div class="text">
+								<div class="bold">Merkel Gardens</div>
+								<span class="highlight">Gardening Business</span>
+							</div>
+							<div class="button" id="merkelgardens"><a target="_blank"
+									href="http://www.merkelgardens.com">Visit
+									Site</a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="contact">
+		<div class="row row-white row-footer">
+			<div class="container flex">
+				<h2 class="waypoint header big" data-animation="slide-in-left">contact</h2>
+				<h4 class="waypoint" data-animation="slide-in-right"><a href="mailto:mr@brads.tech">mr@brads.tech</a>
+				</h4>
+			</div>
+			<div class="icon-wrap flex flex-row">
+				<a href="https://www.linkedin.com/in/brad-stech-95333492/" class="waypoint" data-animation="flip-in-x">
+					<div class="flex icon">
+						<i class="mdi mdi-linkedin"></i>
+					</div>
+				</a>
+				<a href="https://github.com/bradstech01" class="waypoint" data-animation="flip-in-x">
+					<div class="flex icon">
+						<i class="mdi mdi-github-circle"></i>
+					</div>
+				</a>
+			</div>
+			<div class="copyright-note">
+				©2022 Brad Stech
+			</div>
+		</div>
+	</section>
+
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"
+		integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.0/jquery.waypoints.min.js"></script>
+	<script type="text/javascript" src="js/pts.js"></script>
+	<script type="text/javascript" src="js/app.js"></script>
+	<script type="text/javascript" src="js/anim.js"></script>
+</body>
+
 </html>
