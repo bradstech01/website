@@ -301,6 +301,10 @@ section:nth-of-type(2) #portfolio {
   margin : 20px 0;
 }
 
+section:nth-of-type(2) .mix {
+  position: relative;
+}
+
 section:nth-of-type(2) #portfolio .button,
 section:nth-of-type(2) #portfolio .text {
   z-index    : 2;
@@ -632,7 +636,7 @@ footer {
   screen
   and (max-width : 425px) {
   section:nth-of-type(2) #portfolio .mix .card {
-    width : 100vw;
+    width : 80vw;
   }
 }
 
