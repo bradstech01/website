@@ -358,6 +358,10 @@ section:nth-of-type(2) #portfolio .mix:nth-child(1) .card {
 }
 
 section:nth-of-type(2) #portfolio .mix:nth-child(2) .card {
+  background : url("../img/tabtooine.png") center center/cover;
+}
+
+section:nth-of-type(2) #portfolio .mix:nth-child(3) .card {
   background : url("../img/thumb-3.jpg") center center/cover;
 }
 
